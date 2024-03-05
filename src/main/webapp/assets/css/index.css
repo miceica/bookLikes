@@ -1,0 +1,64 @@
+/* Añade estilos personalizados aquí */
+h2{
+    font-family: "Bookman Old Style", fantasy;
+    font-size:50px;
+    color: sienna;
+}
+
+    button {
+        float:right;
+        background-color: #4caf50; /* Color de fondo verde */
+        color: #fff;
+        padding: 10px 20px;
+        border: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-left: 10px;
+    }
+
+    button:hover {
+        background-color: #45a049; /* Cambio de color al pasar el ratón */
+    }
+
+
+.container {
+    background-color: #f8f9fa; /* Fondo del contenedor */
+    padding: 20px;
+}
+
+.card-deck {
+    margin-top: 20px;
+    margin-left: 20px;
+    display: flex; /* Mostrar las tarjetas en línea */
+
+}
+
+.card {
+    border: 1px solid #ddd; /* Borde de las tarjetas */
+    border-radius: 10px; /* Bordes redondeados de las tarjetas */
+    margin-right: 20px; /* Espaciado entre las tarjetas (puedes ajustar según necesites) */
+    margin-left: 20px;
+    width: 300px;
+}
+
+.card:last-child {
+    margin-right: 0; /* Elimina el margen derecho de la última tarjeta */
+    margin-left: 20px;
+}
+
+.card-img-top {
+    border-top-left-radius: 10px; /* Bordes redondeados de la imagen superior izquierda */
+    border-top-right-radius: 10px; /* Bordes redondeados de la imagen superior derecha */
+}
+
+.card-title {
+    color: #007bff; /* Color del título del libro */
+}
+
+.card-text {
+    color: #555; /* Color del texto de descripción */
+}
+
+
+
