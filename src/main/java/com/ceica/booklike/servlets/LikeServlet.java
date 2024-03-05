@@ -1,4 +1,26 @@
 package com.ceica.booklike.servlets;
 
-public class LikeServlet {
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+import java.io.IOException;
+
+@WebServlet(name = "LikeServlet", value = "")
+public class LikeServlet extends HttpServlet {
+
+    public void init() {
+
+    }
+
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        request.getRequestDispatcher("").forward(request,response);
+    }
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        request.getRequestDispatcher("").forward(request, response);
+    }
+    public void destroy() {
+    }
 }

@@ -1,16 +1,28 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Lenovo
-  Date: 05/03/2024
-  Time: 18:29
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <title>Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/register.css"> <!-- Enlaza tu archivo de estilos si es necesario -->
 </head>
 <body>
-<h1>register</h1>
+
+<div class="login-container">
+    <h2>Registro</h2>
+    <form action="processLogin.jsp" method="post">
+        <label for="username">Usuario:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Registrar</button>
+        <button type="submit">Cancelar</button>
+    </form>
+</div>
+
 </body>
 </html>

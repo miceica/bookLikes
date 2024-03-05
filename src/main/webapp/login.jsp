@@ -19,6 +19,7 @@
         <input type="password" id="password" name="password" required>
 
         <button type="submit">Iniciar Sesión</button>
+        <button type="submit">Cancelar</button>
     </form>
 </div>
 

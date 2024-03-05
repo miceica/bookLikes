@@ -15,9 +15,11 @@ public class IndexServlet extends HttpServlet {
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        request.getRequestDispatcher("books.jsp").forward(request,response);
+        request.getRequestDispatcher("").forward(request,response);
     }
-
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        request.getRequestDispatcher("").forward(request, response);
+    }
     public void destroy() {
     }
 }
