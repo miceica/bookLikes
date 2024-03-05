@@ -28,15 +28,15 @@ public abstract class ModeloBase {
             PASSWORD = propiedades.getProperty("db.pass");
         } catch (IOException e) {
             URL = "jdbc:mysql://localhost:3306/booklikes";
-            USUARIO = "booklikes";
+            USUARIO = "root";
             PASSWORD = "1234";
         }
     }
 
     // Método genérico para ejecutar consultas SQL
     private boolean ejecutarQuery(String sql, Object... parametros) {
-        try (Connection conexion = DriverManager.getConnection(URL, USUARIO, PASSWORD);
-             PreparedStatement preparedStatement = conexion.prepareStatement(sql)) {
+        try (Connection connection = DriverManager.getConnection(URL, USUARIO, PASSWORD);
+             PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
 
             // Establecer los valores de los parámetros
             for (int i = 0; i < parametros.length; i++) {

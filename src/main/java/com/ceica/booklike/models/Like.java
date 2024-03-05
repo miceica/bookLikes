@@ -7,10 +7,10 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Likes extends ModeloBase {
+public class Like extends ModeloBase {
     private int idlike;
 
-    public Likes() {
+    public Like() {
     }
 
     public int getIdlike() {
@@ -33,16 +33,16 @@ public class Likes extends ModeloBase {
                 '}';
     }
 
-    public List<Likes> getAll() {
-        List<Likes> likesList = new ArrayList<>();
-        Likes likes = new Likes();
+    public List<Like> getAll() {
+        List<Like> likesList = new ArrayList<>();
+        Like likes = new Like();
         Connection connection = likes.getConnection();
         String consulta = "select idlike from like";
         try {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(consulta);
             while (resultSet.next()) {
-                Likes like1 = new Likes();
+                Like like1 = new Like();
                 like1.setIdlike(resultSet.getInt("idlike"));
                 likesList.add(like1);
             }

@@ -2,6 +2,8 @@ package com.ceica.booklike;
 
 import java.io.*;
 
+import com.ceica.booklike.controller.BookController;
+import com.ceica.booklike.models.Book;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
@@ -14,6 +16,19 @@ public class HelloServlet extends HttpServlet {
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        BookController bookController = new BookController();
+        Book book = new Book();
+        book.setIdbook(3);
+        book.setTitle("Dune2");
+        book.setDescription("Mas gusanos gigantes");
+        book.setAuthor("Frank Herbert");
+        book.setIsbn("9788417347628");
+        bookController.updateBook(book);
+
+
+
+
+
         response.setContentType("text/html");
 
         // Hello
