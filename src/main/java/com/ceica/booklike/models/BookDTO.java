@@ -75,7 +75,7 @@ public class BookDTO {
         String sql = "SELECT count(*) as favoritos, book.title, book.description, book.author, book.idbook \n" +
                 "from book \n" +
                 "inner join fav on book.idbook = fav.book_id \n" +
-                "group by book.idbook, book.title, book.description, book.author, book.idbook;";
+                "group by book.title, book.description, book.author, book.idbook;";
         try {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);

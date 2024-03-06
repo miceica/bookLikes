@@ -14,7 +14,7 @@
 
 <div class="container mt-5">
     <div class="cabecera">
-        <button type="submit">Agregar libro</button>
+        <a href="crud"></a> <button type="submit">Mis libros</button>
         <button type="submit">Volver</button>
     </div>
     <h2>Nuestra libreria</h2>

@@ -11,7 +11,7 @@
 
 <div class="login-container">
     <h2>Iniciar Sesión</h2>
-    <form action="processLogin.jsp" method="post">
+    <form action="" method="post">
         <label for="username">Usuario:</label>
         <input type="text" id="username" name="username" required>
 
@@ -19,7 +19,7 @@
         <input type="password" id="password" name="password" required>
 
         <button type="submit">Iniciar Sesión</button>
-        <button type="submit">Cancelar</button>
+        <a href="index"><button>Cancelar</button></a>
     </form>
 </div>
 

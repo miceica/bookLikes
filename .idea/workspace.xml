@@ -9,8 +9,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dff6d790-375c-42da-b3d6-52781b927df0" name="Changes" comment="Modelos Fav y BookDTO">
+    <list default="true" id="dff6d790-375c-42da-b3d6-52781b927df0" name="Changes" comment="Servlets, assets y .jsp">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/models/BookDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/models/BookDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/FavServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/IndexServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/IndexServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/RegisterServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/UserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/user.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +72,7 @@
     "Tomcat Server.Tomcat 10.1.19.executor": "Run",
     "git-widget-placeholder": "miguel",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Alumno Tarde/IdeaProjects/bookLikes-Arantxa",
+    "last_opened_file_path": "C:/Users/Alumno Tarde/IdeaProjects/bookLike/src/main/webapp",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -74,10 +83,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Alumno Tarde\IdeaProjects\bookLike\src\main\webapp" />
       <recent name="C:\Users\Alumno Tarde\IdeaProjects\bookLike" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Alumno Tarde\IdeaProjects\bookLike" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ceica.booklike.servlets" />
     </key>
   </component>
   <component name="RunManager">
@@ -137,7 +150,7 @@
       <updated>1709577460286</updated>
       <workItem from="1709577462158" duration="1577000" />
       <workItem from="1709650297202" duration="15702000" />
-      <workItem from="1709736979450" duration="8873000" />
+      <workItem from="1709736979450" duration="11318000" />
     </task>
     <task id="LOCAL-00001" summary="bbdd y proyecto base">
       <option name="closed" value="true" />
@@ -187,7 +200,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709747814757</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Servlets, assets y .jsp">
+      <option name="closed" value="true" />
+      <created>1709748570672</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1709748570672</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,6 +220,7 @@
     <MESSAGE value="Corregidos metodos del BookController" />
     <MESSAGE value="arreglando Like.java" />
     <MESSAGE value="Modelos Fav y BookDTO" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modelos Fav y BookDTO" />
+    <MESSAGE value="Servlets, assets y .jsp" />
+    <option name="LAST_COMMIT_MESSAGE" value="Servlets, assets y .jsp" />
   </component>
 </project>
