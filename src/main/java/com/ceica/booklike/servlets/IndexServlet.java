@@ -15,11 +15,11 @@ public class IndexServlet extends HttpServlet {
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-<<<<<<<<< Temporary merge branch 1
+
         request.getRequestDispatcher("login.jsp").forward(request,response);
-=========
-        request.getRequestDispatcher("books.jsp").forward(request,response);
->>>>>>>>> Temporary merge branch 2
+
+
+
     }
 
     public void destroy() {
