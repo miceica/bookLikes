@@ -54,13 +54,13 @@ public class User extends ModeloBase{
 
     public User login(String name, String pass) {
         User user = new User();
-        Connection conn = user.getConnection();
+        Connection connection = user.getConnection();
         String sql = "select iduser,name from user where name=? and pass=?";
         try {
-            PreparedStatement pst = conn.prepareStatement(sql);
-            pst.setString(1, name);
-            pst.setString(2, pass);
-            ResultSet resultSet = pst.executeQuery();
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, name);
+            preparedStatement.setString(2, pass);
+            ResultSet resultSet = preparedStatement.executeQuery();
             if (resultSet.next()) {
                 user.iduser = resultSet.getInt("iduser");
                 user.name = resultSet.getString("name");

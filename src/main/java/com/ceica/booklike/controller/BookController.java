@@ -1,7 +1,8 @@
 package com.ceica.booklike.controller;
 
 import com.ceica.booklike.models.Book;
-import com.ceica.booklike.models.Like;
+import com.ceica.booklike.models.BookDTO;
+import com.ceica.booklike.models.Fav;
 import com.ceica.booklike.models.User;
 
 import java.util.List;
@@ -30,9 +31,9 @@ public class BookController {
 
     // ------------------- Book ----------------------
 
-    public List<Book> getAllBooks() {
-        Book book = new Book();
-        return book.getAll();
+    public List<BookDTO> getAllBooksAndFavs() {
+        BookDTO bookDTO = new BookDTO();
+        return bookDTO.getAllAndFavs();
     }
 
     public List<Book> getAllBooksByUser(int iduser) {
@@ -55,10 +56,10 @@ public class BookController {
         return objBook.update("title=?,description=?,author=?,isbn=? where idbook=?", book.getTitle(), book.getDescription(), book.getAuthor(), book.getIsbn(),book.getIdbook());
     }
 
-    // ------------------- Like ----------------------
+    // ------------------- Fav ----------------------
 
-    public List<Like> getAllLikes() {
-        Like like = new Like();
-        return like.getAll();
+    public boolean fav(int user_id,int book_id) {
+        Fav fav = new Fav();
+        return  fav.create("(user_id,book_id) values (?,?)",user_id,book_id);
     }
 }

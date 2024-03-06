@@ -50,9 +50,7 @@ public class Book extends ModeloBase {
         this.description = description;
     }
 
-    public String getAuthor() {
-        return author;
-    }
+    public String getAuthor() {return author;}
 
     public void setAuthor(String author) {
         this.author = author;
@@ -95,21 +93,7 @@ public class Book extends ModeloBase {
                 '}';
     }
 
-    //MÉTODOS -> getAll() para que coja las características de los libros
-    public List<Book> getAll() {
-        List<Book> bookList = new ArrayList<>();
-        Book book = new Book();
-        Connection connection = book.getConnection();
-        String sql = "SELECT idBook, title, description, author, isbn, dateB, user_id FROM book";
-        try {
-            Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery(sql);
-            bookList = readResultSet(resultSet);
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-        return bookList;
-    }
+    // -------------------------------Metodos----------------------------------
 
     public List<Book> getAllByUser(int iduser) {
         List<Book> bookList = new ArrayList<>();
