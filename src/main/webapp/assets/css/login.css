@@ -23,12 +23,21 @@ h2 {
 p {
     color: #696969; /* Color de texto gris oscuro */
 }
-
+#username{
+    font-size: 60px;
+    font-family: "Bookman Old Style", fantasy;
+    display: block;
+    font-weight: bold;
+    color: sienna;
+    margin-right: 300px;
+}
 label {
+
     display: block;
     margin-top: 10px;
     font-weight: bold;
 }
+
 
 input {
     width: 100%;

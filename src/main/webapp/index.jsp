@@ -14,8 +14,8 @@
 
 <div class="container mt-5">
     <div class="cabecera">
-        <button type="submit">Log In</button>
-        <button type="submit">Registrate</button>
+        <a href="login"><button type="submit">Log In</button></a>
+        <a href="register"><button type="submit">Registrate</button></a>
     </div>
     <h2>Nuestra libreria</h2>
 

@@ -9,14 +9,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dff6d790-375c-42da-b3d6-52781b927df0" name="Changes" comment="Vistas y servlets">
+    <list default="true" id="dff6d790-375c-42da-b3d6-52781b927df0" name="Changes" comment="fin 2">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/controller/BookController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/CrudServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/crud.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/crud.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/FavServlet.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/IndexServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/IndexServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/LikeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/LikeServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/LoginServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/RegisterServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/UserServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/user.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/user.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/user.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,9 +34,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
         <option value="CSS File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -88,6 +95,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.ceica.booklike.controller" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Lenovo\IdeaProjects\bookLikes\src\main\webapp\assets\images" />
     </key>
@@ -115,6 +125,24 @@
       <predefined_log_file id="Tomcat Manager" />
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="59468" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
@@ -156,7 +184,7 @@
       <workItem from="1709577462158" duration="3000" />
       <workItem from="1709578163499" duration="796000" />
       <workItem from="1709649714220" duration="12951000" />
-      <workItem from="1709737086848" duration="6089000" />
+      <workItem from="1709737086848" duration="10700000" />
     </task>
     <task id="LOCAL-00001" summary="mi rama">
       <option name="closed" value="true" />
@@ -206,7 +234,23 @@
       <option name="project" value="LOCAL" />
       <updated>1709742591060</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Fin">
+      <option name="closed" value="true" />
+      <created>1709743359413</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1709743359413</updated>
+    </task>
+    <task id="LOCAL-00008" summary="fin 2">
+      <option name="closed" value="true" />
+      <created>1709748022923</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1709748022923</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,6 +265,25 @@
     <MESSAGE value="Arantxa todas las vistas y servlets" />
     <MESSAGE value="Merge remote-tracking branch 'origin/Arantxa' into Arantxa&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/com/ceica/booklike/servlets/IndexServlet.java&#10;#&#9;src/main/webapp/assets/css/books.css&#10;#&#9;src/main/webapp/books.jsp" />
     <MESSAGE value="Vistas y servlets" />
-    <option name="LAST_COMMIT_MESSAGE" value="Vistas y servlets" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/Arantxa' into Arantxa&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/com/ceica/booklike/servlets/IndexServlet.java&#10;#&#9;src/main/java/com/ceica/booklike/servlets/LikeServlet.java&#10;#&#9;src/main/java/com/ceica/booklike/servlets/LoginServlet.java&#10;#&#9;src/main/java/com/ceica/booklike/servlets/RegisterServlet.java&#10;#&#9;src/main/java/com/ceica/booklike/servlets/UserServlet.java&#10;#&#9;src/main/webapp/assets/css/user.css&#10;#&#9;src/main/webapp/user.jsp" />
+    <MESSAGE value="Fin" />
+    <MESSAGE value="fin 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="fin 2" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/UserServlet.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/LoginServlet.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

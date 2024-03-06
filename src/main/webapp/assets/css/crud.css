@@ -1,0 +1,37 @@
+
+#agregar{
+    margin-left: 20px;
+}
+#nombre{
+    margin-left:100px;
+}
+
+.card-deck {
+    margin-top: 40px;
+    display: flex; /* Mostrar las tarjetas en línea */
+
+}
+
+.card {
+    border: 1px solid #ddd; /* Borde de las tarjetas */
+    border-radius: 10px; /* Bordes redondeados de las tarjetas */
+    margin-right: 20px; /* Espaciado entre las tarjetas (puedes ajustar según necesites) */
+    margin-left: 20px;
+    width: 300px;
+}
+
+
+
+.card-img-top {
+    border-top-left-radius: 10px; /* Bordes redondeados de la imagen superior izquierda */
+    border-top-right-radius: 10px; /* Bordes redondeados de la imagen superior derecha */
+}
+
+.card-title {
+    color: #007bff; /* Color del título del libro */
+}
+
+.card-text {
+    color: #555; /* Color del texto de descripción */
+}
+

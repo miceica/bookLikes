@@ -1,26 +1,45 @@
 package com.ceica.booklike.servlets;
 
+import com.ceica.booklike.controller.BookController;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+import com.ceica.booklike.models.User;
 
 import java.io.IOException;
 
+@WebServlet(name = "LoginServlet", value = "/login")
+public class LoginServlet extends HttpServlet {
 
-public class LoginServlet  {
 
-    public void init() {
-
-    }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        request.getRequestDispatcher("").forward(request,response);
+        User user = (User) request.getSession().getAttribute("user");
+        if (user == null) {
+            request.getRequestDispatcher("login.jsp").forward(request, response);
+        } else {
+
+            response.sendRedirect("user");
+        }
     }
-    /*public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        request.getRequestDispatcher("").forward(request, response);
-    }*/
-    public void destroy() {
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        String user = request.getParameter("username");
+        String pass = request.getParameter("password");
+        BookController bookController = new BookController();
+
+        if (bookController.login(user, pass)) {
+            HttpSession session = request.getSession();
+            session.setAttribute("user", bookController.userLogged);
+            response.sendRedirect("user");
+        } else {
+            request.setAttribute("mensaje", "Usuario o Password incorrecto");
+            request.getRequestDispatcher("login.jsp").forward(request, response);
+
+        }
     }
+
+
 }

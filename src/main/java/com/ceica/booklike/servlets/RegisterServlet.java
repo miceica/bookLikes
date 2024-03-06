@@ -8,18 +8,17 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
+@WebServlet(name = "RegisterServlet", value = "/register")
+public class RegisterServlet extends HttpServlet {
 
-public class RegisterServlet {
 
-    public void init() {
-    }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        request.getRequestDispatcher("").forward(request,response);
+        request.getRequestDispatcher("user.jsp").forward(request,response);
     }
-   /* public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         request.getRequestDispatcher("").forward(request, response);
-    }*/
+    }
     public void destroy() {
     }
 }

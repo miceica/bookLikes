@@ -19,8 +19,8 @@
         <label for="password">Contraseña:</label>
         <input type="password" id="password" name="password" required>
 
-        <button type="submit">Registrar</button>
-        <button type="submit">Cancelar</button>
+        <a href="user"><button type="submit">Registrar</button></a>
+        <a href="index"><button type="submit">Cancelar</button></a>
     </form>
 </div>
 

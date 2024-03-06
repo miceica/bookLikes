@@ -11,7 +11,7 @@
 
 <div class="login-container">
     <h2>Iniciar Sesión</h2>
-    <form action="processLogin.jsp" method="post">
+    <form action="" method="post">
         <label for="username">Usuario:</label>
         <input type="text" id="username" name="username" required>
 
