@@ -127,7 +127,6 @@ public class Book extends ModeloBase {
         return bookList;
     }
 
-    //readResultSet
     private List<Book> readResultSet(ResultSet resultSet) throws SQLException {
         List<Book> bookList = new ArrayList<>();
         while (resultSet.next()) {

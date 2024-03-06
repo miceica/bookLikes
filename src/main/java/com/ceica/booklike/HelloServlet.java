@@ -17,13 +17,8 @@ public class HelloServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         BookController bookController = new BookController();
-        Book book = new Book();
-        book.setIdbook(3);
-        book.setTitle("Dune2");
-        book.setDescription("Mas gusanos gigantes");
-        book.setAuthor("Frank Herbert");
-        book.setIsbn("9788417347628");
-        bookController.updateBook(book);
+        System.out.println(bookController.getAllLikes());
+
 
 
 

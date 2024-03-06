@@ -64,7 +64,6 @@ public class User extends ModeloBase{
             if (resultSet.next()) {
                 user.iduser = resultSet.getInt("iduser");
                 user.name = resultSet.getString("name");
-
                 return user;
             } else {
                 return null;

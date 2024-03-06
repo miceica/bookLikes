@@ -1,6 +1,7 @@
 package com.ceica.booklike.controller;
 
 import com.ceica.booklike.models.Book;
+import com.ceica.booklike.models.Like;
 import com.ceica.booklike.models.User;
 
 import java.util.List;
@@ -9,6 +10,8 @@ import java.util.List;
 public class BookController {
 
     public User userLogged;
+
+    // ------------------- User ----------------------
 
     public boolean login(String username, String pass) {
         User user = new User();
@@ -20,6 +23,13 @@ public class BookController {
         }
     }
 
+    public boolean createUser(String name, String pass) {
+        User user = new User();
+        return user.create("(name,pass) values (?,?)", name, pass);
+    }
+
+    // ------------------- Book ----------------------
+
     public List<Book> getAllBooks() {
         Book book = new Book();
         return book.getAll();
@@ -29,13 +39,6 @@ public class BookController {
         Book book = new Book();
         return book.getAllByUser(iduser);
     }
-
-
-    public boolean createUser(String name, String pass) {
-        User user = new User();
-        return user.create("(name,pass) values (?,?)", name, pass);
-    }
-
 
     public boolean createBook(String title, String description, String author, String  isbn, int user_id ) {
         Book book = new Book();
@@ -50,5 +53,12 @@ public class BookController {
     public boolean updateBook(Book book) {
         Book objBook = new Book();
         return objBook.update("title=?,description=?,author=?,isbn=? where idbook=?", book.getTitle(), book.getDescription(), book.getAuthor(), book.getIsbn(),book.getIdbook());
+    }
+
+    // ------------------- Like ----------------------
+
+    public List<Like> getAllLikes() {
+        Like like = new Like();
+        return like.getAll();
     }
 }
