@@ -34,7 +34,6 @@ public class UserServlet extends HttpServlet {
             if (user == null) {
                 response.sendRedirect("");
             } else {
-
                 BookController bookController = new BookController();
 
                 if (request.getParameter("idbook") != null) {
@@ -43,13 +42,11 @@ public class UserServlet extends HttpServlet {
                     PrintWriter out = response.getWriter();
                     out.write(favs + "");
 
-
                 } else {
                     List<BookDTO> bookDTOList = bookController.getAllBooksAndFavs();
                     request.setAttribute("bookDTOlist", bookDTOList);
                     request.getRequestDispatcher("user.jsp").forward(request, response);
                 }
-
             }
         }
     }

@@ -32,20 +32,63 @@
             <div class="card">
                 <img src="assets/images/dune.jpg" class="card-img-top" alt="Portada <c:out value="${book.title}"/>">
                 <div class="card-body">
-                    <h5 class="card-title"><c:out value="${book.title}"/></h5>
-                    <p class="card-text">Autor: <c:out value="${book.author}"/></p>
-                    <p class="card-text">Descripción: <c:out value="${book.description}"/></p>
-                   <%-- <i class="fa-solid fa-heart"></i><c:out value="${book.favoritos}"/>--%>
+                    <h5 class="card-title"><label id="title${book.idbook}"><c:out value="${book.title}"/></label></h5>
+
+                    <p class="card-text"><label id="author${book.idbook}"><c:out value="${book.author}"/></label></p>
+
+                    <p class="card-text"><label id="description${book.idbook}"><c:out value="${book.description}"/></label></p>
                     <span class="icon-space"></span>
-                    <i class="fa-solid fa-user-pen"></i>
+                    <i onclick="editarLibro(${book.idbook})" class="fa-solid fa-user-pen"></i>
                     <span class="icon-space"></span>
-                    <i class="fa-regular fa-trash-can"></i>
+                    <i onclick="eliminarLibro(${book.idbook})" class="fa-regular fa-trash-can"></i>
                 </div>
             </div>
         </c:forEach>
 
     </div>
 </div>
+
+<form action="" method="post">
+    <input type="hidden" name="idbook" id="idbook">
+    <input type="text" name="title" id="title">
+    <input type="text" name="author" id="author">
+    <input type="text" name="description" id="description">
+    <button type="submit">Editar</button>
+</form>
+
+<script>
+    function eliminarLibro(idbook){
+        var baseUrl = window.location.href + "?borraridbook=" + idbook;
+
+        fetch(baseUrl, {
+            method: 'GET', // Puedes cambiar este método según tu necesidad (POST, PUT, DELETE, etc.)
+            headers: {
+                // Puedes ajustar el tipo de contenido según tu necesidad
+                //'Content-Type': 'application/json'
+                'Content-Type': 'text',
+            },
+        })
+            .then(response => response.text()) // Procesamos la respuesta como JSON
+            .then(data => {
+                console.log(data);
+                location.reload();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+    }
+
+    function  editarLibro(idbook){
+        document.getElementById("idbook").value= idbook;
+        let element="title"+idbook;
+        document.getElementById("title").value= document.getElementById(element).innerHTML;
+        element="author"+idbook;
+        document.getElementById("author").value= document.getElementById(element).innerHTML;
+        element="description"+idbook;
+        document.getElementById("description").value= document.getElementById(element).innerHTML;
+    }
+</script>
+
 
 <!-- Incluye la biblioteca Bootstrap JS al final del cuerpo para mejores prácticas de rendimiento -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

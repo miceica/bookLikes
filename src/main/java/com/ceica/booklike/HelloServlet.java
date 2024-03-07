@@ -18,7 +18,8 @@ public class HelloServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         BookController bookController = new BookController();
-        System.out.println(bookController.getAllBooksAndFavs());
+        System.out.println(bookController.deleteBook(3));
+        //System.out.println(bookController.getAllBooksAndFavs());
 
 
 

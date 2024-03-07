@@ -9,19 +9,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dff6d790-375c-42da-b3d6-52781b927df0" name="Changes" comment="intentando conectar cosas">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/CrudServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/crud.jsp" afterDir="false" />
+    <list default="true" id="dff6d790-375c-42da-b3d6-52781b927df0" name="Changes" comment="favs,salir">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/controller/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/IndexServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/IndexServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/RegisterServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/HelloServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/models/BookDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/models/BookDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/models/ModeloBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/models/ModeloBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/CrudServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/CrudServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/UserServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/user.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/crud.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/crud.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +166,7 @@
       <workItem from="1709577462158" duration="1577000" />
       <workItem from="1709650297202" duration="15702000" />
       <workItem from="1709736979450" duration="14307000" />
-      <workItem from="1709823399939" duration="8873000" />
+      <workItem from="1709823399939" duration="15263000" />
     </task>
     <task id="LOCAL-00001" summary="bbdd y proyecto base">
       <option name="closed" value="true" />
@@ -237,7 +232,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709752767655</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="favs,salir">
+      <option name="closed" value="true" />
+      <created>1709833682687</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1709833682687</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,18 +254,10 @@
     <MESSAGE value="Modelos Fav y BookDTO" />
     <MESSAGE value="Servlets, assets y .jsp" />
     <MESSAGE value="intentando conectar cosas" />
-    <option name="LAST_COMMIT_MESSAGE" value="intentando conectar cosas" />
+    <MESSAGE value="favs,salir" />
+    <option name="LAST_COMMIT_MESSAGE" value="favs,salir" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/ceica/booklike/controller/BookController.java</url>
-          <line>70</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="java.sql.SQLException" memberName="detailMessage" />

@@ -12,6 +12,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 
 @WebServlet(name = "crudServlet", value = "/crud")
@@ -29,19 +30,26 @@ public class CrudServlet extends HttpServlet {
                 // Redireccionar a la página de inicio de sesión, o donde corresponda
                 response.sendRedirect(request.getContextPath() + "/");
             }
+        }
+
+        User user = (User) request.getSession().getAttribute("user");
+        if (user == null) {
+            response.sendRedirect("");
         } else {
-            User user = (User) request.getSession().getAttribute("user");
-            if (user == null) {
-                response.sendRedirect("");
-            } else {
-                BookController bookController = new BookController();
+            BookController bookController = new BookController();
+            if (request.getParameter("borraridbook")!=null){
+                int idbook = Integer.parseInt(request.getParameter("borraridbook"));
+                bookController.deleteBook(idbook);
+                PrintWriter printWriter = response.getWriter();
+                printWriter.write("Libro eliminado");
+            }else{
                 List<Book> bookList = bookController.getAllBooksByUser(user.getIduser());
                 request.setAttribute("booklist", bookList);
                 request.getRequestDispatcher("crud.jsp").forward(request, response);
             }
         }
     }
-
+//completar esto
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         request.getRequestDispatcher("").forward(request, response);
     }

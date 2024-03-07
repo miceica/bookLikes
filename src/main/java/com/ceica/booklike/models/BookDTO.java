@@ -72,9 +72,9 @@ public class BookDTO {
         List<BookDTO> bookDTOList = new ArrayList<>();
         Book book = new Book();
         Connection connection = book.getConnection();
-        String sql = "SELECT count(*) as favoritos, book.title, book.description, book.author, book.idbook \n" +
+        String sql = "SELECT count(fav.book_id) as favoritos, book.title, book.description, book.author, book.idbook \n" +
                 "from book \n" +
-                "inner join fav on book.idbook = fav.book_id \n" +
+                "left join fav on book.idbook = fav.book_id \n" +
                 "group by book.title, book.description, book.author, book.idbook;";
         try {
             Statement statement = connection.createStatement();
