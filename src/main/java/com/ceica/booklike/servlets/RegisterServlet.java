@@ -1,5 +1,6 @@
 package com.ceica.booklike.servlets;
 
+import com.ceica.booklike.controller.BookController;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -16,6 +17,9 @@ public class RegisterServlet extends HttpServlet {
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-         request.getRequestDispatcher("").forward(request, response);
+        String username=request.getParameter("username");
+        BookController bookController=new BookController();
+        bookController.createUser(username,"");
+         response.sendRedirect("login");
      }
 }

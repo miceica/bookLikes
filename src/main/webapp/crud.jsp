@@ -18,22 +18,28 @@
 
 <div class="container mt-5">
     <div class="cabecera">
-        <a href="crud"><button type="submit">Mis libros</button></a>
         <a href="?logout=salir"><button type="submit">Salir</button></a>
+        <a href="user"><button type="submit">Volver</button></a>
+        <button type="submit">Agregar</button>
     </div>
     <h2>Nuestra libreria</h2>
 
     <!-- Card Deck de Bootstrap para mostrar la lista de libros -->
     <div class="card-deck mt-4">
 
-        <c:forEach items="${bookDTOlist}" var="book">
+        <c:forEach items="${booklist}" var="book">
+
             <div class="card">
                 <img src="assets/images/dune.jpg" class="card-img-top" alt="Portada <c:out value="${book.title}"/>">
                 <div class="card-body">
                     <h5 class="card-title"><c:out value="${book.title}"/></h5>
                     <p class="card-text">Autor: <c:out value="${book.author}"/></p>
                     <p class="card-text">Descripción: <c:out value="${book.description}"/></p>
-                    <i onclick="favorito(${book.idbook})" class="fa-solid fa-heart"></i><label id="fav${book.idbook}"><c:out value="${book.favoritos}"/></label>
+                   <%-- <i class="fa-solid fa-heart"></i><c:out value="${book.favoritos}"/>--%>
+                    <span class="icon-space"></span>
+                    <i class="fa-solid fa-user-pen"></i>
+                    <span class="icon-space"></span>
+                    <i class="fa-regular fa-trash-can"></i>
                 </div>
             </div>
         </c:forEach>
@@ -41,33 +47,7 @@
     </div>
 </div>
 
-<script>
-   function favorito(idbook){
-       var baseUrl = window.location.href + "?idbook=" + idbook;
-
-       fetch(baseUrl, {
-           method: 'GET', // Puedes cambiar este método según tu necesidad (POST, PUT, DELETE, etc.)
-           headers: {
-               // Puedes ajustar el tipo de contenido según tu necesidad
-               //'Content-Type': 'application/json'
-               'Content-Type': 'text',
-           },
-       })
-           .then(response => response.text()) // Procesamos la respuesta como JSON
-           .then(data => {
-                    let elemento="fav"+idbook;
-                    document.getElementById(elemento).innerHTML=data;
-          console.log(data);
-
-           })
-           .catch(error => {
-               console.error('Error:', error);
-           });
-   }
-</script>
-
 <!-- Incluye la biblioteca Bootstrap JS al final del cuerpo para mejores prácticas de rendimiento -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>

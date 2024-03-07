@@ -12,7 +12,7 @@
 
 <div class="login-container">
     <h2>Registro</h2>
-    <form action="processLogin.jsp" method="post">
+    <form action="" method="post">
         <label for="username">Usuario:</label>
         <input type="text" id="username" name="username" required>
 
@@ -20,7 +20,7 @@
         <input type="password" id="password" name="password" required>
 
         <button type="submit">Registrar</button>
-        <button type="submit">Cancelar</button>
+        <%--<button type="submit">Cancelar</button>--%>
     </form>
 </div>
 

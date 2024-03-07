@@ -1,6 +1,7 @@
 package com.ceica.booklike.servlets;
 
 import com.ceica.booklike.controller.BookController;
+import com.ceica.booklike.models.Book;
 import com.ceica.booklike.models.BookDTO;
 import com.ceica.booklike.models.User;
 import jakarta.servlet.ServletException;
@@ -11,11 +12,10 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 
-@WebServlet(name = "userServlet", value = "/user")
-public class UserServlet extends HttpServlet {
+@WebServlet(name = "crudServlet", value = "/crud")
+public class CrudServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         String logoutParam = request.getParameter("logout");
@@ -34,29 +34,15 @@ public class UserServlet extends HttpServlet {
             if (user == null) {
                 response.sendRedirect("");
             } else {
-
                 BookController bookController = new BookController();
-
-                if (request.getParameter("idbook") != null) {
-                    int idbook = Integer.parseInt(request.getParameter("idbook"));
-                    int favs = bookController.fav(user.getIduser(), idbook);
-                    PrintWriter out = response.getWriter();
-                    out.write(favs + "");
-
-
-                } else {
-                    List<BookDTO> bookDTOList = bookController.getAllBooksAndFavs();
-                    request.setAttribute("bookDTOlist", bookDTOList);
-                    request.getRequestDispatcher("user.jsp").forward(request, response);
-                }
-
+                List<Book> bookList = bookController.getAllBooksByUser(user.getIduser());
+                request.setAttribute("booklist", bookList);
+                request.getRequestDispatcher("crud.jsp").forward(request, response);
             }
         }
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-
-
         request.getRequestDispatcher("").forward(request, response);
     }
 }

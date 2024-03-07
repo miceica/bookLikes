@@ -1,3 +1,7 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -16,11 +20,11 @@
 
 <div class="container mt-5">
     <div class="cabecera">
-        <a href="login">
-            <button>Log In</button>
-        </a>
         <a href="register">
             <button>Registrate</button>
+        </a>
+        <a href="login">
+            <button>Log In</button>
         </a>
     </div>
     <h2>Nuestra libreria</h2>
@@ -28,25 +32,18 @@
     <!-- Card Deck de Bootstrap para mostrar la lista de libros -->
     <div class="card-deck mt-4">
 
+        <c:forEach items="${bookDTOlist}" var="book">
 
-
-
-
-        <div class="card">
-            <img src="assets/images/dune.jpg" class="card-img-top" alt="Portada del Libro 1">
-            <div class="card-body">
-                <h5 class="card-title">Dune</h5>
-                <p class="card-text">Autor: Frank Herbert</p>
-                <p class="card-text">Descripción: Descripción del Libro 1. Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit.</p>
-                <i class="fa-solid fa-heart"></i>
+            <div class="card">
+                <img src="assets/images/dune.jpg" class="card-img-top" alt="Portada <c:out value="${book.title}"/>">
+                <div class="card-body">
+                    <h5 class="card-title"><c:out value="${book.title}"/></h5>
+                    <p class="card-text">Autor: <c:out value="${book.author}"/></p>
+                    <p class="card-text">Descripción: <c:out value="${book.description}"/></p>
+                    <i class="fa-solid fa-heart"></i><c:out value="${book.favoritos}"/>
+                </div>
             </div>
-        </div>
-
-
-
-
-
+        </c:forEach>
 
     </div>
 </div>

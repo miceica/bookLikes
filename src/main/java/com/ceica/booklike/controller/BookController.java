@@ -5,6 +5,10 @@ import com.ceica.booklike.models.BookDTO;
 import com.ceica.booklike.models.Fav;
 import com.ceica.booklike.models.User;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 
 
@@ -58,8 +62,25 @@ public class BookController {
 
     // ------------------- Fav ----------------------
 
-    public boolean fav(int user_id,int book_id) {
+    public int fav(int user_id,int book_id) {
         Fav fav = new Fav();
-        return  fav.create("(user_id,book_id) values (?,?)",user_id,book_id);
+        fav.create("(user_id,book_id) values (?,?)",user_id,book_id);
+        Connection conn= fav.getConnection();
+        String sql="select count(*) as favoritos from fav where book_id=?";
+        try {
+            PreparedStatement stm=conn.prepareStatement(sql);
+            stm.setInt(1,book_id);
+            ResultSet rs= stm.executeQuery();
+
+            if(rs.next()){
+                int favoritos= rs.getInt("favoritos");
+                return favoritos;
+            }
+            return 0;
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 }
