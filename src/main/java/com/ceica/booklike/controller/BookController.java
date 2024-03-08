@@ -45,7 +45,7 @@ public class BookController {
         return book.getAllByUser(iduser);
     }
 
-    public boolean createBook(String title, String description, String author, String  isbn, int user_id ) {
+    public boolean createBook(String title, String description, String author, String  isbn, int user_id) {
         Book book = new Book();
         return book.create("(title,description,author,isbn,user_id) values (?,?,?,?,?)", title, description, author, isbn, user_id);
     }
@@ -55,9 +55,9 @@ public class BookController {
         return book.delete("idbook=?", idBook);
     }
 
-    public boolean updateBook(Book book) {
+    public boolean updateBook(String title, String description, String author, String  isbn, int idbook) {
         Book objBook = new Book();
-        return objBook.update("title=?,description=?,author=?,isbn=? where idbook=?", book.getTitle(), book.getDescription(), book.getAuthor(), book.getIsbn(),book.getIdbook());
+        return objBook.update("title=?,description=?,author=?,isbn=? where idbook=?", title, description, author, isbn, idbook);
     }
 
     // ------------------- Fav ----------------------

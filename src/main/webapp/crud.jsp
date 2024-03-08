@@ -41,8 +41,8 @@
                 <div class="card-body">
                     <h5 class="card-title"><label id="title${book.idbook}"><c:out value="${book.title}"/></label></h5>
                     <p class="card-text"><label id="author${book.idbook}"><c:out value="${book.author}"/></label></p>
-                    <p class="card-text"><label id="description${book.idbook}"><c:out
-                            value="${book.description}"/></label></p>
+                    <p class="card-text"><label id="description${book.idbook}"><c:out value="${book.description}"/></label></p>
+                    <p class="card-text"><label id="isbn${book.idbook}"><c:out value="${book.isbn}"/></label></p>
                     <span class="icon-space"></span>
                     <i onclick="editarLibro(${book.idbook})" class="fa-solid fa-pen-to-square"></i>
                     <span class="icon-space"></span>
@@ -61,18 +61,19 @@
                 <h5 class="modal-title" id="editarModalLabel">Modal title</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-                <form action="" method="post">
+            <form action="crud" method="post">
+                <div class="modal-body">
                     <input type="hidden" name="idbook" id="idbook">
                     <input type="text" name="title" id="title">
                     <input type="text" name="author" id="author">
                     <input type="text" name="description" id="description">
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                <button type="button" class="btn btn-primary">Guardar</button>
-            </div>
+                    <input type="text" name="isbn" id="isbn">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
@@ -131,6 +132,8 @@
         document.getElementById("author").value = document.getElementById(element).innerHTML;
         element = "description" + idbook;
         document.getElementById("description").value = document.getElementById(element).innerHTML;
+        element = "isbn" + idbook;
+        document.getElementById("isbn").value = document.getElementById(element).innerHTML;
 
         // Abre el modal
         var myModal = new bootstrap.Modal(document.getElementById('editarLibroModal'));

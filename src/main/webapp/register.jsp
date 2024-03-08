@@ -12,7 +12,7 @@
 
 <div class="login-container">
     <h2>Registro</h2>
-    <form action="" method="post">
+    <form action="register" method="post">
         <label for="username">Usuario:</label>
         <input type="text" id="username" name="username" required>
 
