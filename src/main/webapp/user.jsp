@@ -19,6 +19,7 @@
 <div class="container mt-5">
     <div class="cabecera">
         <a href="crud"><button type="submit">Mis libros</button></a>
+        <%--<a href="crud2"><button type="submit">Mis libros</button></a>--%>
         <a href="?logout=salir"><button type="submit">Salir</button></a>
     </div>
     <h2>Nuestra libreria</h2>

@@ -9,13 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dff6d790-375c-42da-b3d6-52781b927df0" name="Changes" comment="agregar, que se vea bonito, editar en proceso">
+    <list default="true" id="dff6d790-375c-42da-b3d6-52781b927df0" name="Changes" comment="registrar usuario y editar libro">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/CrudServlet2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/crud2.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/controller/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/CrudServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/CrudServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/RegisterServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/crud.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/crud.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/user.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/user.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,10 +63,10 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Tomcat Server.Tomcat 10.1.19.executor": "Run",
+    "Tomcat Server.Tomcat 10.1.19.executor": "Debug",
     "git-widget-placeholder": "miguel",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Alumno Tarde/IdeaProjects/bookLike",
+    "last_opened_file_path": "C:/Users/Alumno Tarde/IdeaProjects/bookLike/src/main/webapp",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -166,7 +164,7 @@
       <workItem from="1709650297202" duration="15702000" />
       <workItem from="1709736979450" duration="14307000" />
       <workItem from="1709823399939" duration="15384000" />
-      <workItem from="1709911135630" duration="6904000" />
+      <workItem from="1709911135630" duration="9177000" />
     </task>
     <task id="LOCAL-00001" summary="bbdd y proyecto base">
       <option name="closed" value="true" />
@@ -256,7 +254,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709915915317</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="registrar usuario y editar libro">
+      <option name="closed" value="true" />
+      <created>1709918250671</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1709918250671</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,7 +279,8 @@
     <MESSAGE value="favs,salir" />
     <MESSAGE value="eliminar, botones y editar en proceso" />
     <MESSAGE value="agregar, que se vea bonito, editar en proceso" />
-    <option name="LAST_COMMIT_MESSAGE" value="agregar, que se vea bonito, editar en proceso" />
+    <MESSAGE value="registrar usuario y editar libro" />
+    <option name="LAST_COMMIT_MESSAGE" value="registrar usuario y editar libro" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -282,6 +289,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/CrudServlet.java</url>
           <line>56</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/ceica/booklike/servlets/CrudServlet2.java</url>
+          <line>85</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
