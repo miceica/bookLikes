@@ -31,7 +31,7 @@ h2{
     margin-top: 20px;
     margin-left: 20px;
     display: flex; /* Mostrar las tarjetas en línea */
-
+    flex-wrap: wrap;
 }
 
 .card {

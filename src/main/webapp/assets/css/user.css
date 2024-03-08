@@ -30,7 +30,7 @@ button:hover {
 .card-deck {
     margin-top: 40px;
     display: flex; /* Mostrar las tarjetas en línea */
-
+    flex-wrap: wrap;
 }
 
 .card {

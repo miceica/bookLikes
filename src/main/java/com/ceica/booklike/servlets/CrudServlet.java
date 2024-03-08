@@ -13,6 +13,7 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.time.LocalDate;
 import java.util.List;
 
 @WebServlet(name = "crudServlet", value = "/crud")
@@ -51,6 +52,21 @@ public class CrudServlet extends HttpServlet {
     }
 //completar esto
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        request.getRequestDispatcher("").forward(request, response);
+        User user = (User) request.getSession().getAttribute("user");
+        if (user == null) {
+            response.sendRedirect("login");
+        } else {
+            BookController bookController = new BookController();
+            bookController.userLogged = user;
+
+            String title = request.getParameter("newTitle");
+            String description = request.getParameter("newDescription");
+            String author = request.getParameter("newAuthor");
+            String isbn = request.getParameter("newIsbn");
+
+            bookController.createBook(title, description, author, isbn, user.getIduser());
+
+            response.sendRedirect("crud");
+        }
     }
 }
