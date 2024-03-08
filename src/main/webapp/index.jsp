@@ -27,7 +27,7 @@
             <button>Log In</button>
         </a>
     </div>
-    <h2>Nuestra libreria</h2>
+    <h2>Libreria bookLike</h2>
 
     <!-- Card Deck de Bootstrap para mostrar la lista de libros -->
     <div class="card-deck mt-4">

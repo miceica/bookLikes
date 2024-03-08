@@ -30,7 +30,7 @@
             Agregar
         </button>
     </div>
-    <h2>Nuestra libreria</h2>
+    <h2>Tu libreria</h2>
 
     <!-- Card Deck de Bootstrap para mostrar la lista de libros -->
     <div class="card-deck mt-4">

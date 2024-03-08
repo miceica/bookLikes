@@ -36,8 +36,7 @@ button:hover {
 .card {
     border: 1px solid #ddd; /* Borde de las tarjetas */
     border-radius: 10px; /* Bordes redondeados de las tarjetas */
-    margin-right: 20px; /* Espaciado entre las tarjetas (puedes ajustar según necesites) */
-    margin-left: 20px;
+    margin: 20px; /* Espaciado entre las tarjetas */
     width: 300px;
 }
 
